@@ -1,6 +1,5 @@
 import openai
-from pymongo import MongoClient
-from dtypes import ChatCompletionResponse, Role
+from dtypes import ChatCompletionResponse
 
 
 def get_gpt_response(prompt):

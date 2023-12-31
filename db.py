@@ -1,7 +1,5 @@
 import datetime
 from pymongo import MongoClient
-from enum import Enum
-from dtypes import Role
 
 
 client = MongoClient("mongodb://localhost:27017/")
