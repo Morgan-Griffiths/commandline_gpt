@@ -16,7 +16,7 @@ conversation_entry = {
     "timestamp": datetime.datetime.utcnow(),
     "query": "some_query",
     "response": "some_response",
-    "system_message": "some_system_message",  # Or a reference to the SystemMessages collection
+    "system_message": "some_system_message",
 }
 
 # Inserting the document

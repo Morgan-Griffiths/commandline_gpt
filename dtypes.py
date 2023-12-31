@@ -1,10 +1,6 @@
 from enum import Enum
-import openai
-import os
-
 from pydantic import BaseModel
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 class Role(str, Enum):
