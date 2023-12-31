@@ -12,20 +12,8 @@ conversations = db["conversations"]
 
 
 def load_conversation(conversation_id):
-    conversation = conversations.find_one({"conversation_id": conversation_id})
+    conversation = conversations.find({"conversation_id": conversation_id})
     return conversation
-
-
-def update_conversation(conversation_id, query, response, system_message):
-    """Add to the conversation with the latest query and response"""
-    conversation_entry = {
-        "conversation_id": conversation_id,
-        "timestamp": datetime.datetime.utcnow(),
-        "query": query,
-        "response": response,
-        "system_message": system_message,
-    }
-    conversations.insert_one(conversation_entry)
 
 
 def get_last_conversation_id():
