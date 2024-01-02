@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "commandline gpt"
+name = "commandline_gpt"
 version = "0.1.0"
 description = ""
 authors = ["Morgan Griffiths <morgangriffiths@openai.com>"]
