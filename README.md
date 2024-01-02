@@ -6,13 +6,14 @@ This is a minimalist commandline tool for interacting and piping text to GPT. It
 
 ## Install MongoDB
 
-Follow the instructions here: https://docs.mongodb.com/manual/installation/
+Follow the instructions here: https://www.mongodb.com/docs/manual/administration/install-community/
 
-## Install Python requirements
+## Install the python dependencies with poetry
 
-`pip install -r requirements.txt`
+`pip install poetry`
+`poetry install`
 
-## Set up an alias
+## Set up an alias (optional)
 
 Add this to your .bashrc or .zshrc
 `alias g="python ~/code/commandline_gpt/command_line.py"`
@@ -23,10 +24,10 @@ Add this to your .bashrc or .zshrc
 
 `g <prompt>`
 
-## Continue a conversation
+## Continue the last conversation
 
-`g`
+`g -c <prompt>`
 
 ## Fuzzy search through conversations
 
-`g <search term>`
+`g -s <search term>`
