@@ -12,7 +12,6 @@ from db import (
 )
 from utils import get_gpt_response,construct_conversation
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 @click.command()
 @click.argument("query", type=str, required=False)
