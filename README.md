@@ -16,7 +16,7 @@ Follow the instructions here: https://www.mongodb.com/docs/manual/administration
 ## Set up an alias (optional)
 
 Add this to your .bashrc or .zshrc
-`alias g="python ~/code/commandline_gpt/command_line.py"`
+`alias g="python ~/code/commandline_gpt/main.py"`
 
 # Usage
 

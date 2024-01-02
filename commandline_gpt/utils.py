@@ -1,11 +1,12 @@
 from openai import OpenAI
+from openai.types.chat import ChatCompletion
 
 client = OpenAI()
 
 
 def get_gpt_response(prompt):
     MODEL = "gpt-3.5-turbo"
-    response = client.chat.completions.create(
+    response: ChatCompletion = client.chat.completions.create(
         model=MODEL,
         messages=[
             {

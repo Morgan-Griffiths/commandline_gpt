@@ -2,15 +2,15 @@ import os
 import sys
 import uuid
 import click
-from system_messages import CHATGPT_IDENTITY
+from commandline_gpt.system_messages import CHATGPT_IDENTITY
 import openai
-from db import (
+from commandline_gpt.db import (
     add_record,
     search_conversations,
     get_last_conversation_id,
     load_conversation,
 )
-from utils import get_gpt_response,construct_conversation
+from commandline_gpt.utils import get_gpt_response, construct_conversation
 
 
 @click.command()
@@ -24,7 +24,7 @@ def cli(query, cont, search):
         response = get_gpt_response(code_with_prompt)
         add_record(conversation_id, query, response, CHATGPT_IDENTITY)
         click.echo(response)
-    
+
     elif search:
         results = search_conversations(search)
         for result in results:
@@ -43,7 +43,7 @@ def cli(query, cont, search):
             conversations = load_conversation(conversation_id)
             # Process the query
             message_history = construct_conversation(conversations)
-            response = get_gpt_response(message_history + '\n\nUser:\n' + query)
+            response = get_gpt_response(message_history + "\n\nUser:\n" + query)
             add_record(conversation_id, query, response, CHATGPT_IDENTITY)
             click.echo(response)
         else:
